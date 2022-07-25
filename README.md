@@ -1,6 +1,28 @@
 # GmstekTest
 
+## DEMO:
+
+### [Click Here to see an AWS Demo](https://elasticbeanstalk-sa-east-1-021899183456.s3.sa-east-1.amazonaws.com/)
+
+
+## Steps
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.0.
+
+Clone the repository:
+```bash
+git clone https://github.com/jabg97/gmstek_test.git
+```
+
+Install dependencies:
+```bash
+npm install
+```
+
+Run DEV server:
+```bash
+ng serve
+```
 
 ## Development server
 

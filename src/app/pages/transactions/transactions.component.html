@@ -1,0 +1,12 @@
+<div class="transaction-container">
+  <transaction-summary></transaction-summary>
+  <h1>Current Transactions</h1>
+  <mat-tab-group mat-align-tabs="start">
+    <mat-tab label="6 Transactions to Accept">
+      <transaction-accept-table></transaction-accept-table>
+    </mat-tab>
+    <mat-tab label="42 Transactions to Review">
+      <transaction-detail-table [transaction]="null"></transaction-detail-table>
+    </mat-tab>
+  </mat-tab-group>
+</div>

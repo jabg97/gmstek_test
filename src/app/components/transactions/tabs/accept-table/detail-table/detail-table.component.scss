@@ -1,0 +1,104 @@
+@use 'sass:map';
+@use '@angular/material'as mat;
+@import 'src/themes.scss';
+
+$color-config: mat.get-color-config($gmstek-light-theme);
+$primary-palette: map.get($color-config, 'primary');
+$accent-palette: map.get($color-config, 'accent');
+$warn-palette: map.get($color-config, 'warn');
+
+table.mat-table {
+  width: 100%;
+}
+
+button.mat-raised-button {
+  margin-left: 3px;
+  margin: 10px;
+}
+
+th.mat-header-cell {
+  font-size: 14px;
+  font-weight: 900;
+  padding: 1rem 0;
+  color: map-get($accent-palette, 800);
+}
+
+div.custom-row {
+  display: flex;
+  flex-direction: row;
+  gap: 2em;
+  padding: 2em;
+}
+
+
+
+div.custom-cell:first-child {
+  flex: 0 0 25%;
+  height: auto;
+  border-radius: 15px;
+  max-width: 20vw;
+  border: 5px solid map-get($primary-palette, 500);
+}
+
+div.custom-cell.no-transaction:first-child {
+  flex: 0 0 100%;
+  max-width: 98vw;
+  border: none;
+  border-radius: 0px;
+}
+
+
+div.custom-cell:last-child {
+  flex: 0 0 75%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+div.custom-sub-cell:first-child {
+  flex: 0 0 35%;
+}
+
+div.custom-sub-cell:last-child {
+  flex: 0 0 65%;
+}
+
+.custom-sub-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.not-found {
+  margin: auto;
+  color: map-get($warn-palette, 600);
+}
+
+.comment-form{
+  padding: 1em;
+  p{
+    margin-bottom: 0.5em;
+    font-weight: 500;
+    color: map-get($accent-palette, 800);
+  }
+.field-full-width{
+  width: 100%;
+  position: relative;
+  mat-icon{
+    position: absolute;
+    right: 0;
+    bottom: 5px;
+    cursor: pointer;
+  }
+}
+}
+
+.card-number {
+  p {
+    color: map-get($accent-palette, 700);
+
+    span {
+      font-weight: 900;
+    }
+  }
+}

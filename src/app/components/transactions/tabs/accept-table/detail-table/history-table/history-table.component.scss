@@ -1,0 +1,23 @@
+@use 'sass:map';
+@use '@angular/material'as mat;
+@import 'src/themes.scss';
+
+$color-config: mat.get-color-config($gmstek-light-theme);
+$accent-palette: map.get($color-config, 'accent');
+
+table.mat-table {
+  width: 100%;
+  margin-top: 2em;
+}
+
+th.mat-header-cell {
+  font-size: 14px;
+  font-weight: 900;
+  padding: 0.5rem 0;
+  color: map-get($accent-palette, 600);
+}
+
+td.mat-cell {
+  padding: 0.5rem 0;
+  color: map-get($accent-palette, 800);
+}

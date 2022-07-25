@@ -1,0 +1,50 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+mat-toolbar {
+  padding: 1em 0.5em;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+  .menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: gray;
+    font-size: 14px;
+
+    img {
+      max-width: 30px;
+    }
+  }
+
+}
+
+.mat-form-field {
+  flex: 0 0 50%;
+}
+
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex {
+  gap: 0.5em;
+  align-items: center;
+  background-color: transparent;
+}
+
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex * {
+  color: gray;
+}
+
+.mat-input-element {
+  font-size: 16px;
+}
+
+::ng-deep .mat-form-field-underline {
+  display: none;
+}
+
+::ng-deep .mat-form-field-wrapper {
+  position: relative;
+  margin-top: 18px;
+  width: 100%;
+}

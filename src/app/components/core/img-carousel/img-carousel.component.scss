@@ -1,0 +1,39 @@
+
+::ng-deep .slick-prev {
+  margin-left: 40px;
+}
+::ng-deep .slick-next {
+  margin-right: 40px;
+}
+
+::ng-deep .slick-prev:before,
+::ng-deep .slick-next:before {
+  color: rgba(255,255,255,0.8);
+  font-size: 30px;
+}
+
+.carousel-container{
+  position: relative;
+  height: 100%;
+button{
+  position: absolute;
+  bottom: 10px;
+  background-color: white;
+  color: dimgray;
+}
+button.info-btn{
+  left:15px;
+}
+button.zoom-btn{
+ right:10px;
+}
+}
+
+
+::ng-deep ngx-slick-carousel.carousel{
+  height: 100% !important;
+  *{
+    border-radius: 10px;
+    height: 100% !important;
+  }
+}

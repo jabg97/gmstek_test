@@ -1,0 +1,60 @@
+@use 'sass:map';
+@use '@angular/material'as mat;
+@import 'src/themes.scss';
+
+$color-config: mat.get-color-config($gmstek-light-theme);
+$primary-palette: map.get($color-config, 'primary');
+$accent-palette: map.get($color-config, 'accent');
+
+$space: 30px;
+
+div.summary-container {
+  padding: $space 0;
+
+  mat-grid-list {
+    margin: auto;
+    border-radius: 15px;
+    background-color: map-get($primary-palette, 900);
+
+    mat-grid-tile {
+      ::ng-deep div.mat-grid-tile-content {
+        justify-content: start !important;
+
+        mat-card {
+          margin-left: $space;
+          display: flex;
+          flex-direction: row;
+          gap: 1.5em;
+          min-width: 450px;
+
+          div.content {
+            font-weight: 900;
+            color: map-get($primary-palette, 900);
+            display: flex;
+            flex-direction: column;
+            align-content: flex-start;
+            justify-content: space-evenly;
+            align-items: flex-start;
+            width: 100%;
+
+            div {
+              display: flex;
+              flex-direction: row;
+              width: 90%;
+              font-size: 16px;
+              justify-content: space-between;
+            }
+          }
+
+          div.content:first-child {
+            color: map-get($accent-palette, 900);
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}

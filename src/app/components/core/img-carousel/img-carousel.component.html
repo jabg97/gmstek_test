@@ -1,0 +1,13 @@
+<div class="carousel-container">
+  <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="config">
+  <div ngxSlickItem *ngFor="let slide of slides" class="slide">
+    <img src="{{ slide.img }}" alt="" width="100%">
+  </div>
+</ngx-slick-carousel>
+<button  class="info-btn" mat-mini-fab aria-label="Info">
+  <mat-icon>info</mat-icon>
+</button>
+<button class="zoom-btn" mat-mini-fab aria-label="Zoom">
+  <mat-icon>zoom_in</mat-icon>
+</button>
+</div>

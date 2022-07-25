@@ -1,0 +1,104 @@
+@use 'sass:map';
+@use '@angular/material'as mat;
+@import 'src/themes.scss';
+
+$color-config: mat.get-color-config($gmstek-light-theme);
+$accent-palette: map.get($color-config, 'accent');
+$warn-palette: map.get($color-config, 'warn');
+
+$trasition: 300ms ease;
+
+
+table.mat-table {
+  width: 100%;
+}
+
+th.mat-header-cell{
+  font-size: 14px;
+  font-weight: 900;
+  color: map-get($accent-palette, 800);
+}
+
+.detail-row:not(.collapsed-row),
+::ng-deep .detail-row:not(.collapsed-row)  *  {
+  transition: $trasition;
+  height: auto;
+}
+
+::ng-deep .detail-row.collapsed-row  * {
+  transition: $trasition;
+  height: 0;
+  opacity: 0;
+}
+
+.detail-row.collapsed-row {
+  transition: $trasition;
+  height: 0;
+  opacity: 0;
+}
+
+button.mat-button {
+  cursor: default;
+}
+
+.expand-button {
+  cursor: pointer;
+
+  .mat-icon {
+    color: map-get($accent-palette, 900);
+    transition: $trasition;
+    transform: rotate(90deg);
+  }
+}
+
+.expand-button.expanded {
+  .mat-icon {
+    transform: rotate(-90deg);
+  }
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+mat-toolbar{
+  gap:2em;
+  padding: 3em 0.5em;
+  background-color: transparent;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.mat-form-field {
+  flex: 0 0 50%;
+}
+
+
+::ng-deep .mat-form-field-appearance-fill  .mat-form-field-flex {
+  gap: 0.5em;
+  align-items: center;
+  background-color: transparent;
+}
+
+
+::ng-deep .internal-search.mat-form-field-appearance-fill  .mat-form-field-flex {
+  padding: 0 1em;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+::ng-deep .mat-form-field-appearance-fill  .mat-form-field-flex *{
+  color:gray ;
+}
+
+.mat-input-element{
+ font-size: 16px;
+}
+
+::ng-deep .mat-form-field-underline{
+ display: none;
+}
+
+::ng-deep .mat-form-field-wrapper {
+  position: relative;
+  margin-top: 18px;
+  width: 100%;
+}
+

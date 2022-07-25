@@ -2,7 +2,7 @@
 
 ## DEMO:
 
-### [Click Here to see an AWS Demo](https://elasticbeanstalk-sa-east-1-021899183456.s3.sa-east-1.amazonaws.com/)
+### [Click Here to see an AWS Demo](https://elasticbeanstalk-sa-east-1-021899183456.s3.sa-east-1.amazonaws.com/index.html)
 
 
 ## Steps
